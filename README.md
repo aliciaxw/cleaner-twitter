@@ -1,14 +1,11 @@
 # cleaner-twitter
-removes all extra modules from twitter dashboard except for profile information
+removes extra modules on a twitter dashboard
 
-what exactly does it remove?
+## what exactly does it remove?
 
 * who to follow module
-
 * trends module
-
 * footer module
-
 * moments tab
 
 applicable to front page dashboard and individual profiles.
