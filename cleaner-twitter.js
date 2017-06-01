@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         cleaner-twitter
-// @namespace    https://github.com/aliciaxw/
-// @version      0.1
-// @description  removes unnecessary twitter modules
-// @author       alicia wang
-// @include      https://twitter.com/*
-// @grant        none
+// @name             cleanerTwitter
+// @namespace        https://github.com/aliciaxw
+// @version          0.2
+// @description      removes everything in dashboard except for profile information
+// @author           alicia wang
+// @include          http*://twitter.com/*
+// @grant            none
 // ==/UserScript==
 
 (function() {
@@ -21,12 +21,20 @@
 	}
   }
 
+  //added this because script wouldn't work on url change instead of reload
+  //awful roundabout way of doing it but i'll fix it!!! when i know what i'm doing in college
+  (function (oldPage) {
+	window.history.pushState = function()
+	{
+	  location.reload();
+	  oldPage.apply(window.history, arguments);
+	};
+  })(window.history.pushState);
+
   hideByClassName('moments');
   hideByClassName('wtf-module');
   hideByClassName('trends');
   hideByClassName('Footer');
   hideByClassName('SidebarCommonModules');    //sidebar on user profiles
-
-  //to-do: script only works on refresh, cannot navigate to other twitter page by click
 
 })();
