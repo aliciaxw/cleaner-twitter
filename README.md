@@ -14,7 +14,4 @@ applicable to front page dashboard and individual profiles.
 
 ## how to use
 you will need some sort of userscript manager for your browser (i have only tested this on tampermonkey for chrome, sorry firefox users!)
-create a new script and paste this code in, then save. should work automatically.
-
-note: there's a bit of a fake fix for a bug when switching urls without reloading - will result in minor increase in page loading time.
-i will fix eventually!
+create a new script and paste this code in, then save and enable. should work automatically.

@@ -21,8 +21,6 @@
 	}
   }
 
-  //added this because script wouldn't work on url change instead of reload
-  //awful roundabout way of doing it but i'll fix it!!! when i know what i'm doing in college
   (function (oldPage) {
 	window.history.pushState = function()
 	{
